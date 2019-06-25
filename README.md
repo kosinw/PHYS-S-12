@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to [GitHub Pages](https://git.io/fjrzS)
 
 You can use the [editor on GitHub](https://github.com/nathanmelenbrink/demoJekyll/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
