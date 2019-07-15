@@ -32,9 +32,6 @@ void setup()
   // Clear the display of Adafruit logo
   display.clearDisplay();
 
-  // sync time
-  synctime();
-
   previousTime = millis();
 }
 
@@ -45,10 +42,6 @@ void loop()
 
   // Display time
   displaytime();
-}
-
-void synctime()
-{
 }
 
 void updatetime()
