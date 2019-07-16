@@ -1,20 +1,18 @@
-#include <SPI.h>
 #include <Wire.h>
-#include "time.h"
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+#include <stdio.h>
+#include <RTClib.h>
 
 #define WIDTH 128
 #define HEIGHT 64
 
 #define OLED_RESET -1
 
-#define HEADER 'T'
-
 Adafruit_SSD1306 display(WIDTH, HEIGHT, &Wire, OLED_RESET);
-Time time(1, 4, 0);
-
-unsigned long previousTime;
+DateTime dt(__DATE__, __TIME__);
+float previousTime;
+int milli;
 
 void setup()
 {
@@ -46,7 +44,18 @@ void loop()
 
 void updatetime()
 {
-  time.addMillis(millis() - previousTime);
+  milli += millis() - previousTime;
+  int seconds = dt.second() + (milli / 1000);  
+  int minutes = dt.minute() + (seconds / 60);
+  int hour = dt.hour() + (minutes / 60);
+
+  milli %= 1000;
+  seconds %= 60;
+  minutes %= 60;
+  hour %= 24;
+
+  dt = DateTime(dt.year(), dt.month(), dt.day(), hour, minutes, seconds);
+
   previousTime = millis();
 }
 
@@ -57,7 +66,12 @@ void displaytime()
   display.setTextSize(2);
   display.setTextColor(WHITE);
   display.setCursor(WIDTH / 2 - 50, HEIGHT / 2);
-  display.println(time.toString());
+
+  display.print(dt.hour());
+  display.print(":");
+  display.print(dt.minute());
+  display.print(":");
+  display.println(dt.second());
 
   display.display();
 }
