@@ -1,7 +1,0 @@
-{
-    "port": "COM4",
-    "board": "arduino:avr:nano",
-    "programmer": "AVRISP mkII",
-    "sketch": "ulysses.ino",
-    "configuration": "cpu=atmega328old"
-}
