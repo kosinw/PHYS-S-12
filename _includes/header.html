@@ -1,13 +1,13 @@
 <header class="header-layout">
     <div class="header-title">
-        <h3><a href="/">Kosi Nwabueze</a></h3>
-        <h2><a href="/">PHYS S-12: Introduction to Digital Fabrication</a></h2>
+        <h3><a href="{{ url }}">Kosi Nwabueze</a></h3>
+        <h2><a href="{{ url }}"">PHYS S-12: Introduction to Digital Fabrication</a></h2>
     </div>
     <nav>
-        <a href="/archive">archive</a>
+        <a href="{{ "archive" | relative_url }}">archive</a>
         <a href="https://kosinw.com">site</a>
-        <a href="/about">about</a>
-        <a href="{% post_url 2019-08-06-Session12 %}">final</a>
+        <a href="{{ "about" | relative_url }}">about</a>
+        <a href="{{ "12" | relative_url }}">final</a>
         <a href="https://github.com/kosinw/PHYS-S-12" class="svg">
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
