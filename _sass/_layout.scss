@@ -1,0 +1,19 @@
+.post-layout,.default-layout {
+    margin: 0 auto;
+    max-width: 550px;
+}
+
+.post-layout {
+    * {
+        max-width: 100%;
+    }
+}
+
+.header-layout {
+    margin: 140px 0px 60px;
+    text-transform: uppercase;
+
+    nav {
+        margin-top: 20px;
+    }
+}

@@ -1,1 +1,16 @@
-theme: minima
+# theme: minima
+
+# Includes
+# include:
+#   - _redirects
+
+# Setup
+title:               'PHYS S-12: Introduction to Digital Fabrication'
+url:                 https://kosinw.github.io/PHYS-S-12
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
