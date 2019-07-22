@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Archives
+title: Archive
+permalink: /archive
 ---
 
 <section class="home">
@@ -9,10 +10,7 @@ title: Archives
     {% for post in sorted-posts %}
     <li>
       <h3>
-        <a class="home-link" href="{{ post.url | prepend: site.baseurl }}">
-          {{ post.date | date: '%b %d' }}
-        </a>
-        - {{ post.title }}
+        <a class="home-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: '%b %d' }}</a> - {{ post.title }}
       </h3>
     </li>
     {% endfor %}

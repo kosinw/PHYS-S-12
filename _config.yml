@@ -5,7 +5,9 @@
 #   - _redirects
 
 # Setup
-title:               'PHYS S-12: Introduction to Digital Fabrication'
+title: 'PHYS S-12: Introduction to Digital Fabrication'
+baseurl: /PHYS-S-12
+include: ['_pages']
 
 # Assets
 #

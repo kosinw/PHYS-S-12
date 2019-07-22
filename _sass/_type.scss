@@ -6,6 +6,26 @@ body {
   background-color: $body-color;
 }
 
+.post-layout {
+  
+  h1,h2,h3,h4 {
+    line-height: 1.0em;
+  }
+
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+
+  a {}
+  p {}
+
+  .post-link {
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+}
+
 a,
 a:visited {
   text-decoration: none;
@@ -44,11 +64,11 @@ a:hover {
       }
 
       svg {
-        width: 22px;
+        width: 16px;
         line-height: 1.25em;
         position: relative;
-        left: 0;
-        top: 2px;
+        left: 6px;
+        top: 5px;
         height: 20px;
         margin: 0 auto;
       }
