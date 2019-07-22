@@ -9,6 +9,13 @@ title: 'PHYS S-12: Introduction to Digital Fabrication'
 baseurl: /PHYS-S-12
 include: ['_pages']
 
+# Markdown
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
