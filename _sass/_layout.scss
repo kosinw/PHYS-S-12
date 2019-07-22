@@ -13,6 +13,12 @@
     }
 }
 
+.home {
+    * {
+        max-width: 100%;
+    }
+}
+
 .header-layout {
     margin: 140px 0px 60px;
     text-transform: uppercase;

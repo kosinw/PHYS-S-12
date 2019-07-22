@@ -6,6 +6,17 @@ body {
   background-color: $body-color;
 }
 
+.home {
+  .home-link {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  .read-more {
+    text-decoration: underline;
+  }
+}
+
 .post-layout {
   main {
     h1,

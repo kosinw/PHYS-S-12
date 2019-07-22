@@ -1,17 +1,19 @@
 ---
 layout: default
-title: Archives
+title: Home
 ---
 
 <section class="home">
-  <ul class="home-list">
-    {% assign sorted-posts = site.posts | reverse %}
-    {% for post in sorted-posts %}
-    <li>
+    {% for post in site.posts %}    
+    {% if post.visible %}
       <h3>
         <a class="home-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: '%b %d' }}</a> - {{ post.title }}
       </h3>
-    </li>
+      <main> 
+        {{ post.content | truncatewords: 100 }} 
+      </main>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Click here to read more &#8594;</a>
+    {% break %}
+    {% endif %}
     {% endfor %}
-  </ul>
 </section>
