@@ -4,16 +4,19 @@ title: Home
 ---
 
 <section class="home">
-    {% for post in site.posts %}    
-    {% if post.visible %}
-      <h3>
-        <a class="home-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: '%b %d' }}</a> - {{ post.title }}
-      </h3>
-      <main> 
-        {{ post.content | truncatewords: 100 }} 
-      </main>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Click here to read more &#8594;</a>
-    {% break %}
-    {% endif %}
-    {% endfor %}
+  {% for post in site.posts %}
+  {% if post.visible %}
+  <h3>
+    <a class="home-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: '%b %d' }}</a> -
+    {{ post.title }}
+  </h3>
+  <div class="post-layout">
+    <main>
+      {{ post.content | truncatewords: 100 }}
+    </main>
+  </div>
+  <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Click here to read more &#8594;</a>
+  {% break %}
+  {% endif %}
+  {% endfor %}
 </section>
