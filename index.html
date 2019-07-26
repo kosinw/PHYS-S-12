@@ -12,7 +12,7 @@ title: Home
   </h3>
   <div class="post-layout">
     <main>
-      {{ post.content | truncatewords: 100 }}
+      {{ post.content | truncatewords: 250 }}
     </main>
   </div>
   <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Click here to read more &#8594;</a>
